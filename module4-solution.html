@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Greeting Script</title>
+</head>
+<body>
+  <h1>Greeting Script Output</h1>
+
+  <script>
+    // Step 1: Fix the sayHello function
+    function sayHello(name) {
+      console.log("Hello " + name);
+    }
+
+    // Step 2: Fix the sayGoodbye function
+    function sayGoodbye(name) {
+      console.log("Goodbye " + name);
+    }
+
+    // Step 3: Create an array of names
+    var names = ["John", "Jane", "Mark", "Lisa", "Jake"];
+
+    // Step 4: Loop over the array and call the correct function
+    for (var i = 0; i < names.length; i++) {
+      var firstLetter = names[i].charAt(0).toLowerCase();
+      
+      if (firstLetter === 'j') {
+        sayGoodbye(names[i]);
+      } else {
+        sayHello(names[i]);
+      }
+    }
+  </script>
+</body>
+</html>
